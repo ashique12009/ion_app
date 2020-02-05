@@ -10,8 +10,8 @@
 
   <img src="/assets/loader.png" alt="loader" id="loader" *ngIf="showHide">
 
-  <ion-list inset>
-    <h6 *ngFor="let data of noticeList">{{data.title.rendered}}</h6>
+  <ion-list class="ion-padding">
+  	<ion-item *ngFor="let item of noticeList" (click)="viewNotice(item)">{{item.title.rendered}}</ion-item>
   </ion-list>
 
   <ion-list lines="none">
