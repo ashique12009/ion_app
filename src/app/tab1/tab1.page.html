@@ -8,7 +8,11 @@
 
 <ion-content>
 
-  <img src="/assets/loader.png" alt="loader" id="loader">
+  <img src="/assets/loader.png" alt="loader" id="loader" *ngIf="showHide">
+
+  <ion-list inset>
+    <h6 *ngFor="let data of noticeList">{{data.title.rendered}}</h6>
+  </ion-list>
 
   <ion-list lines="none">
     <ion-list-header>
